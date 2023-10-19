@@ -35,7 +35,7 @@ function Register() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        const validationErrors = validateRegister(formData)
+        const validationErrors = validateRegister(formData) as Errors // Specify the type here
         if (Object.keys(validationErrors).length === 0) {
             // The form is valid, you can submit it here
             console.log('Form is valid, submitting...')
